@@ -19,7 +19,6 @@ command `npm run build`. The Node.js back end serves serves these assets using t
 ```bash
 # Install dependencies for front end and back end
 npm install
-
 # Build front end assets with webpack
 npm run build
 
