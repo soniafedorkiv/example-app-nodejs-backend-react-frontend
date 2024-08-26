@@ -1,7 +1,7 @@
 {
   "name": "example-app",
   "scripts": {
-    "build": "webpack --mode development --entry ./src/client/index.js --output ./static/bundle.js",
+    "build": "webpack",
     "start": "node src/server/app.js"
   },
   "dependencies": {
@@ -17,3 +17,4 @@
     "webpack-cli": "^5.1.4"
   }
 }
+

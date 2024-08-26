@@ -1,7 +1,8 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // Змініть на 'production' для продакшн-збірки
+  mode: 'development', 
   entry: './src/client/index.js',
   output: {
     filename: 'bundle.js',
@@ -15,14 +16,19 @@ module.exports = {
         use: {
           loader: '@sucrase/webpack-loader',
           options: {
-            transforms: ['jsx'] // Трансформує JSX
+            transforms: ['jsx'] 
           }
         }
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'] // Додає розширення файлів для імпорту
+    extensions: ['.js', '.jsx'] 
   },
-  devtool: 'source-map' // Додає мапи для налагодження
+  devtool: 'source-map', 
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/client/index.html' 
+    })
+  ]
 };
