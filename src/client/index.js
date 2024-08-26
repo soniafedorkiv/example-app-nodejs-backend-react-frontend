@@ -1,6 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import ExampleComponent from "./components/ExampleComponent";
+function App() {
+  return (
+    <div>
+      <h1>Welcome to My App!</h1>
+      <p>Created by: Your First Name Your Last Name</p>
+    </div>
+  );
+}
 
-ReactDOM.render(<ExampleComponent />, document.getElementById("container"));
+ReactDOM.render(<App />, document.getElementById('root'));
